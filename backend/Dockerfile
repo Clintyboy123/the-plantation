@@ -1,5 +1,5 @@
 # Backend: Express API. Production dependencies only, runs as the unprivileged "node" user.
-FROM node:24-alpine
+FROM node:26-alpine
 
 ENV NODE_ENV=production
 WORKDIR /app
