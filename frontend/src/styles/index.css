@@ -1,0 +1,456 @@
+@import "tailwindcss";
+@import "@fontsource-variable/cormorant-garamond/wght.css";
+@import "@fontsource-variable/cormorant-garamond/wght-italic.css";
+@import "@fontsource-variable/montserrat/wght.css";
+
+/*
+  THE PLANTATION — design tokens.
+  Idea: "From first light to fairy light". The site moves through a day on the estate, so colour is
+  used as light: Porcelain Ivory is morning, Botanical Sage is afternoon shade, Forest Green is dusk,
+  Deep Evergreen is night. Warm Champagne is the fairy light: hairlines and small accents, never fills.
+*/
+@theme {
+  --font-sans: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Megant", "Cormorant Garamond Variable", Georgia, serif;
+  --font-display: "Cormorant Garamond Variable", "Cormorant Garamond", Georgia, serif;
+
+  /* Brand palette (fixed by the brief) */
+  --color-ivory: #f6f3ec;
+  --color-forest: #354638;
+  --color-evergreen: #202d25;
+  --color-sage: #a3aa94;
+  --color-champagne: #d8c7aa;
+  --color-charcoal: #34332f;
+
+  /* Working tints, derived from the palette (never new hues) */
+  --color-ivory-deep: #ede8dc; /* a half-step into shade for alternating light sections */
+  --color-sage-light: #dfe1d6; /* sage washed toward ivory: afternoon sections */
+  --color-stone: #5e5c55; /* secondary text on ivory, 6.4:1 */
+  --color-mist: #c9cbbf; /* secondary text on evergreen/forest, 7:1 */
+  --color-night: #18221c; /* evergreen one step deeper: footer floor */
+  --color-danger: #9b3b2e;
+  --color-success: #354638;
+
+  /* Easy Ease (After Effects F9) for every animation and transition, shared with utils/motion.js.
+     --default-transition-timing-function makes Tailwind's plain transition-* classes use it too. */
+  --ease-site: cubic-bezier(0.333, 0, 0.667, 1);
+  --ease-cinema: cubic-bezier(0.333, 0, 0.667, 1);
+  --default-transition-timing-function: cubic-bezier(0.333, 0, 0.667, 1);
+
+  --breakpoint-xs: 30rem;
+}
+
+/* Megant: the page-title face (every <h1>). One weight, no italic, no accented letters.
+   NOTE: the supplied file is the "Personal Use Only" version: buy a commercial web licence before launch. */
+@font-face {
+  font-family: "Megant";
+  src: url("../assets/fonts/megant.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------------------------------------------------------------------------
+   Layout system: one page margin, one 12-column grid, one section rhythm.
+   --------------------------------------------------------------------------- */
+:root {
+  /* Gold: the logo intro and the gallery frames. Built from Warm Champagne, deepened and lifted for a metallic read. */
+  --gradient-gold: linear-gradient(115deg, #a8844c 0%, #d8c7aa 22%, #f3e7c8 38%, #c9a66b 52%, #e8d7ae 68%, #b8945a 84%, #d8c7aa 100%);
+  --margin: clamp(1.25rem, 4.2vw, 4.5rem);
+  --gutter: clamp(1rem, 1.8vw, 2rem);
+  --section: clamp(6rem, 11vw, 10.5rem);
+}
+
+@utility wrap {
+  width: 100%;
+  max-width: 108rem;
+  margin-inline: auto;
+  padding-inline: var(--margin);
+}
+
+@utility grid-site {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+@utility section-y {
+  padding-block: var(--section);
+}
+
+/* ---------------------------------------------------------------------------
+   Type system. Display = Cormorant Garamond (light, italic for emphasis).
+   Text = Montserrat. Page titles (h1) = Megant, see the end of this file. Every size on the site is one of these.
+   --------------------------------------------------------------------------- */
+@utility type-hero {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(3.1rem, 8.2vw, 8.75rem);
+  line-height: 0.92;
+  letter-spacing: -0.018em;
+}
+@utility type-h1 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.75rem, 6vw, 6.25rem);
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+}
+@utility type-h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.35rem, 4.4vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.012em;
+}
+@utility type-h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.006em;
+}
+@utility type-h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 1.6vw, 1.625rem);
+  line-height: 1.2;
+}
+@utility type-lede {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.1vw, 2.05rem);
+  line-height: 1.32;
+  letter-spacing: -0.004em;
+}
+@utility type-body-l {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  @media (width >= 64rem) {
+    font-size: 1.125rem;
+  }
+}
+@utility type-body {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+@utility type-caption {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+@utility type-label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.22em; /* Montserrat runs wide: tracked a little tighter than a narrower sans would be */
+  text-transform: uppercase;
+}
+@utility type-nav {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+@utility type-numeral {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(3.25rem, 5.5vw, 5.75rem);
+  line-height: 0.9;
+  font-variant-numeric: lining-nums;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-ivory font-sans text-charcoal antialiased;
+    font-feature-settings: "kern", "liga";
+  }
+
+  .type-hero em,
+  .type-h1 em,
+  .type-h2 em,
+  .type-h3 em,
+  .type-lede em {
+    font-weight: 400;
+  }
+
+  ::selection {
+    background: var(--color-champagne);
+    color: var(--color-evergreen);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 3px;
+  }
+
+  .on-dark :focus-visible {
+    outline-color: var(--color-champagne);
+  }
+
+  img {
+    -webkit-user-drag: none;
+  }
+
+  /* Lenis smooth scrolling */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: clip;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Fairy lights: tiny champagne points that breathe. Only ever used in night sections. */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes scroll-cue {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+/* Page titles. Unlayered on purpose so it wins over the type-* utilities, whatever size class an h1 carries.
+   Megant is wider than Cormorant and has a single upright weight, so it is set a step smaller, never
+   faux-bolded or faux-italicised; emphasised words keep their own line instead. */
+h1 {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: -0.01em;
+  font-kerning: normal;
+}
+h1 em {
+  font-style: normal;
+}
+h1.type-hero {
+  font-size: clamp(2.6rem, 6.3vw, 6.6rem);
+  line-height: 1;
+}
+h1.type-h1 {
+  font-size: clamp(2.4rem, 4.8vw, 4.9rem);
+  line-height: 1.02;
+}
+
+/* ---------------------------------------------------------------------------
+   Frame system (components/Frame.jsx). A fine rule in the experience's colour, a gap of page
+   background, then the rounded photo. The rule is drawn on ::before with a mask so its inside stays
+   transparent, which lets one gradient (gold) or flat colour work on any background.
+   --------------------------------------------------------------------------- */
+@layer components {
+  .frame {
+    --band: 4px;
+    --gap: 5px;
+    --radius: 18px;
+    border-radius: var(--radius);
+    /* Each frame is its own stacking context, so its rule (::before, z-index 3) stays with its photo
+       and never paints over a neighbouring photo that overlaps it. */
+    isolation: isolate;
+  }
+  .frame[data-size="sm"] {
+    --band: 3.5px;
+    --gap: 3px;
+    --radius: 11px;
+  }
+  .frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    border-radius: inherit;
+    padding: var(--band);
+    background: var(--paint, var(--color-champagne));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  }
+  /* Photo area inside the frame (absolutely positioned version) */
+  .frame-inner {
+    position: absolute;
+    inset: calc(var(--band) + var(--gap));
+    border-radius: calc(var(--radius) - var(--band) - var(--gap));
+    overflow: hidden;
+    isolation: isolate;
+  }
+  /* In-flow version, for frames whose height comes from their content (the gallery masonry) */
+  .frame-pad {
+    padding: calc(var(--band) + var(--gap));
+  }
+  .frame-inner-flow {
+    position: relative;
+    border-radius: calc(var(--radius) - var(--band) - var(--gap));
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .frame[data-tone="gold"] {
+    --paint: var(--gradient-gold);
+  }
+  .frame[data-tone="gold"]::before {
+    background-size: 220% 100%;
+    background-position: 0% 50%;
+    transition: background-position 1.2s var(--ease-site);
+  }
+  .group:hover .frame[data-tone="gold"]::before,
+  .frame[data-tone="gold"]:hover::before {
+    background-position: 100% 50%; /* light travels across the gold */
+  }
+  .frame[data-tone="forest"] {
+    --paint: var(--color-forest);
+  }
+  .frame[data-tone="sage"] {
+    --paint: var(--color-sage);
+  }
+  .frame[data-tone="champagne"] {
+    --paint: var(--color-champagne);
+  }
+  .frame[data-tone="charcoal"] {
+    --paint: rgb(52 51 47 / 0.75);
+  }
+  .frame[data-tone="evergreen"] {
+    --paint: var(--color-evergreen);
+  }
+  .frame[data-tone="ivory"] {
+    --paint: rgb(246 243 236 / 0.7);
+  }
+}
+
+/* While the wedding reel is on screen its counter pill is the navigation, so the site header steps aside. */
+html[data-reel] [data-social-rail],
+html[data-reel] [data-scroll-top] {
+  opacity: 0;
+  pointer-events: none;
+}
+html[data-reel] header {
+  transform: translateY(-100%) !important;
+  transition: transform 0.6s var(--ease-site);
+}
+
+/* Photo hover: every framed photo eases in slightly when pointed at (fine pointers only). */
+@media (hover: hover) and (pointer: fine) {
+  .frame:hover .photo-img,
+  .group:hover .frame .photo-img {
+    scale: 1.05;
+  }
+}
+
+/* Overlapping pairs: pointing at one photo softly blurs the other, so the eye goes where the pointer is.
+   !important because a photo that has floated in keeps an inline filter: blur(0px) from Motion. */
+.overlap-group .overlap-item {
+  transition: filter 0.7s var(--ease-site), opacity 0.7s var(--ease-site);
+}
+@media (hover: hover) and (pointer: fine) {
+  .overlap-group:has(.overlap-item:hover) .overlap-item:not(:hover) {
+    filter: blur(6px) !important;
+    opacity: 0.85;
+  }
+}
+
+/* Music player */
+@keyframes music-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+.music-volume {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 44px; /* full tap target; the visible track is drawn below */
+  background: transparent;
+  cursor: pointer;
+}
+.music-volume::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-forest) var(--fill), rgb(52 51 47 / 0.18) var(--fill));
+}
+.music-volume::-moz-range-track {
+  height: 3px;
+  border-radius: 999px;
+  background: rgb(52 51 47 / 0.18);
+}
+.music-volume::-moz-range-progress {
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-forest);
+}
+.music-volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -5.5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--color-ivory);
+  border: 2px solid var(--color-forest);
+}
+.music-volume::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--color-ivory);
+  border: 2px solid var(--color-forest);
+}
+.music-volume:focus-visible {
+  outline: none;
+}
+.music-volume:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px var(--color-champagne);
+}
+/* The music player owns the bottom-left corner: hero content keeps clear of it (pb-24 on heroes). */

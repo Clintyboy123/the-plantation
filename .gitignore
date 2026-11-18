@@ -1,0 +1,24 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and builds
+node_modules/
+dist/
+release/
+
+# Local data
+uploads/
+backups/
+*.sql
+*.sql.gz
+
+# System and editor files
+.DS_Store
+npm-debug.log*
+.vscode/
+.idea/
+
+# Original photo downloads (large; re-exported into frontend/public/photos by tools/photos.py)
+assets-source/

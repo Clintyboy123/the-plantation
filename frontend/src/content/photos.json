@@ -1,0 +1,1281 @@
+{
+ "hero-dusk": {
+  "widths": [
+   800,
+   1600,
+   1903
+  ],
+  "width": 1903,
+  "height": 1268,
+  "alt": "The Plantation ballroom at dusk, its porch lit by strings of fairy lights beneath the old trees",
+  "category": null,
+  "focus": "50% 60%",
+  "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JagCdMoMYAC/NN6SpjIfTOOigAP7ZTarFbiE3O0tN4+SiMPoFzSdmPw/9TsXwx/WuvasGYl4OTPVSWXs1WpQiJw0xl+MxBkExnOFDK5AAAA=="
+ },
+ "estate-aerial": {
+  "widths": [
+   800,
+   1400
+  ],
+  "width": 1400,
+  "height": 1050,
+  "alt": "Aerial view of The Plantation\u2019s white roofs in the forest at sunset",
+  "category": null,
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQBACdASoYABIAPulmqk2pJiQiMBgMASAdCUAVgAId+CKraftNs0C/oUwsmlCJAAD8j+H9f3o4kZNlerYMhfUEOrFz4vsrTNFm20F93DWbwkaieMentVAYLhWRIMmIA+86xuEfztCH/O8RPJ8uYjcAAAA="
+ },
+ "estate-forest-aerial": {
+  "widths": [
+   800,
+   1397
+  ],
+  "width": 1397,
+  "height": 1047,
+  "alt": "Aerial view of the suites tucked into the forest canopy",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwBACdASoYABIAPu1mqk2ppaQiMAgBMB2JQBibA3UdpNDKH4pqipNUqBPMoAD+v3U6xYhir1rFTGJaOHKhq5F2WLXvvKjKA+XrKKQ6cqEMNCg3z3cZr+H0Dxv214Cy4+sU1c6B8rQc4ZAFbIKdmtgQWY2bbrkTaAAAAA=="
+ },
+ "estate-night": {
+  "widths": [
+   800,
+   1600,
+   2025
+  ],
+  "width": 2025,
+  "height": 1148,
+  "alt": "The ballroom glowing through the forest at night",
+  "category": "weddings",
+  "focus": "50% 70%",
+  "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAwCdASoYAA4APu1iqU2ppaOiMAgBMB2JZQAAW+s7twBcW0nsAP70GYaFujy2uEkTfW3Qx600Hzyv4s60dy4A"
+ },
+ "estate-venue": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2508,
+  "height": 1672,
+  "alt": "The ballroom\u2019s porch and arched doors opening onto the garden",
+  "category": "corporate",
+  "focus": "50% 60%",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoYABAAPu1oqk6ppiQiMAgBMB2JQBOmUABbMP+Icg6kiExXWAAA4YKeYnZ+SprGyijYWrPJMf2WVLIssy7cju/07dkMwNHxsLUg2xAF0txdWa/GNitPAAAA"
+ },
+ "estate-garden": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1365,
+  "alt": "The garden path leading to the ballroom",
+  "category": null,
+  "focus": "50% 60%",
+  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JQBibAxQiDAskWgk9wAD+6dLAjBuhyiePtc3i5rdB7uQTB5TCjCGlpEPTHdP2Jpw7pUIlXX85S8CaUxnKgAAA"
+ },
+ "chapel-aisle": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "The empty forest chapel aisle with white pews and chandelier",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JYwCdACEsuGhPrBDoAAD+5zMnK0vgLzoSX7TdR4jRkO/IeKsRd5fK6Bw5JKC+wK+typyj5gVy7b9I0MCsycAA"
+ },
+ "chapel-exterior": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1365,
+  "alt": "The stone forest chapel among the trees",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JQAAKiysht3exYADfsVUJb7p+cYRLrYVaQA0OEHKMkbbAz0//8FrBeah9/AKF68eTpXOpEv0Y38Rp4g8WpWaGz7JAAA=="
+ },
+ "chapel-vows": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "A couple saying their vows in the forest chapel",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoYAA8APu1oqk6ppiQiMAgBMB2JZQC/OBY0+Jvqa0xrtZM9QAD1Vb5yaDRSzG048QcMy3RE6w+TA9FMhJnHL2ndSz3OmENP1O3RsTe5zoEmU184AAA="
+ },
+ "chapel-kiss": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "Guests cheering as the couple kiss at the altar",
+  "category": "weddings",
+  "focus": "50% 45%",
+  "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYAA8APu1qrU8ppiQiMAgBMB2JYgCdABdZ6xsByNc9o1oAAP5W1engbdU9gaxl4ZyVujncTTqZPNGVLA6yLeixETYqqyAXPwN+XNy7FZq3cWY3UGvcZlWAAAA="
+ },
+ "chapel-confetti": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "Confetti thrown over the newlyweds on the chapel steps",
+  "category": "weddings",
+  "focus": "50% 40%",
+  "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoYAA8APu1iqk4ppaQiMAgBMB2JQBOmUABF0k5BWBx6OqVcZ0AA/e7d13osLatrEkvofdPGEjcjBszQLX7CauAUjScNGln+Z7++7QD2wX2H74oPfNlBpVDnkdes4MhxAcgAAA=="
+ },
+ "chapel-aisle-walk": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2508,
+  "height": 1522,
+  "alt": "A bride walking down the candlelit chapel aisle",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoYAA8APu1kqU4ppaOiMAgBMB2JYwCdAB6Q8bHe6UsVAAD+0L4Pv2J6qH9CcRgfilbtNwi8MyRAlVTXuxcb7+7aghK1FlaFWzYCnBwHdXMbF6c+adahFAAA"
+ },
+ "couple-forest": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "A bride and groom close together in the forest, holding white roses",
+  "category": "weddings",
+  "focus": "45% 40%",
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JQAAFRTQuHksoAPozS5+VAqh9h0cT4kmKoYuI9bLN8umfAJ/vcn++LuP8GQwD5xXo1BcR80DjgAAA"
+ },
+ "couple-well": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1249,
+  "alt": "Newlyweds sitting at the old stone well in the courtyard",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAwCdASoYAA8APu1mq04ppaQiMAgBMB2JYwC7ABhs/uvfsiCXYAD+2fH6HyAeAw/pSy+ZhTfeIr8409WQT43TujSV3KP+ijEL+Fm7fDupqG+xjAA="
+ },
+ "couple-sunset": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "A couple walking along a coastal hill at sunset",
+  "category": "weddings",
+  "focus": "60% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZgC2yCHfJM0WL8Lde28AAP7zbsgJpjJgew7QUIcLKZGTWPbqfO3Dwq0qN7rRF2lJvHzKM0/92re+tSIT33+MOIgAAA=="
+ },
+ "couple-golden": {
+  "widths": [
+   800,
+   960
+  ],
+  "width": 960,
+  "height": 582,
+  "alt": "A couple embracing in golden afternoon light",
+  "category": "weddings",
+  "focus": "50% 40%",
+  "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JYgCdMoACwZ7T5mf1JCQgAPtfPhdehMc3wlbNuglYLwvI/xXyLD6QxfSfVJe7qpD2mS6cRiV79GZxpgN8FyTtubafrQCkwF2+OX5njAAAAA=="
+ },
+ "bride-forest": {
+  "widths": [
+   800,
+   1600,
+   2025
+  ],
+  "width": 2025,
+  "height": 1228,
+  "alt": "A bride standing among the trees, her train spread on the forest floor",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JYwC06B8fwozeE6aAAP7Y/UmQ8rlkRTZLG23NyrijPwOCb3Jupr2OJ8o0txu46BzRc28hNUAVC8gfjAA="
+ },
+ "bride-path": {
+  "widths": [
+   800,
+   1600,
+   1672
+  ],
+  "width": 1672,
+  "height": 2508,
+  "alt": "A couple walking away down a sandy forest path",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQBACdASoQABgAPu1orU2ppqSiMAgBMB2JQBOj+ABgVpGWf5DcIBn0k9AAAP7qsrN5p+8iKXibfNeshoD1fatm4thSe/BLDDp7ihcmYGz726djAFLNuvH5zkt+uRYehGqaaDpsAAA="
+ },
+ "bride-mirror": {
+  "widths": [
+   640
+  ],
+  "width": 640,
+  "height": 960,
+  "alt": "A bride\u2019s reflection in an ornate mirror as she gets ready",
+  "category": "weddings",
+  "focus": "50% 30%",
+  "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQAwCdASoQABgAPu1iqU2ppaQiMAgBMB2JQBdgA8m/AD2tX9bAAP6WoWmTjcp7Rvo36KanfQ2qX3/FCsIY+3yC7w8teBzuvB7+5Dv9/GfYEtfVZHEwaGknxSu09C7AGu12BAAA"
+ },
+ "bride-cottage": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "A bride holding her bouquet beside the white cottage",
+  "category": "weddings",
+  "focus": "70% 50%",
+  "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JZQDImCHXGpnYRer5oAAA/lvJQ++VPQS46ZCFjUzWDiuo4LJ0TBVuykAAAA=="
+ },
+ "bridesmaids": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "Bridesmaids in rose dresses waiting outside the bridal suite",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoYAA8APu1iqk2ppaQiMAgBMB2JQBdgA3D2awOtChUB6pFy4ADzvf0qNBC1Bm6zsGEObvcylKY7cKcS4OYhHpLieE0WCKRwfvLEfGq+IFcEgqtAAAA="
+ },
+ "groomsmen": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "The groom and his groomsmen on the lawn",
+  "category": "weddings",
+  "focus": "50% 45%",
+  "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JZAC7AA8GY9W2iVPbj4AArPIi0fnvuB3LHPRmvUWdGZf7lYdajlr7KgZVsK/p/JrpX+ZqZHt+x3ClRuqIY4FDWszl5xu+3vB96q4AAAA="
+ },
+ "first-dance": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "A couple\u2019s first dance in the ballroom",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoYAA8APu1kqU2ppaQiMAgBMB2JZgCdABQ8m5A8CbiJ6AD+JeI3rUOVMIZ1FbhxdoFkPtOHCkKvsvmi/N7XPEZ8K/9zhRoJdvlDsv74t0GwJ1/QRCNUuAvrJCFm7QF6AAA="
+ },
+ "sparklers": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "Guests holding sparklers at night",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwBACdASoYAA8APu1iqk4ppaQiMAgBMB2JQBOmUGSxiTHQ722DOIM/P0y6UAD+8rEINvw8Pv7SB2mDhMlBK972XO8ctZB64oc3Z1O3gQngnVLdi3kR74qy7LSquRzC8Bb0cC5b9OaEoPiWzCAAAA=="
+ },
+ "ballroom-reception": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2508,
+  "height": 1522,
+  "alt": "A full ballroom reception with long wooden tables",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoYAA8APu1iqU2ppaOiMAgBMB2JQBOmUABsDMrwlqpas65JDwAA9c6SQ/hOcdTOAHrC/Lnm3JTfQo2yK3dmgqCui8Bp3TXTkId7BSA3rFe/yQhdMrgAAA=="
+ },
+ "ballroom-greenery": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "Long tables with greenery runners in the light-filled ballroom",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYAA8APu1kq04ppaQiMAgBMB2JQBOmUABFhsovpDKVhvDpgAD0XPoQ9QMBcjrp4lxR/zraJGEt7Ylc5148iIesExsHrHLzs9hMhm/16vJyJcaHOYUFZK/No8FKWoBoAAA="
+ },
+ "ballroom-cake": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "A white wedding cake by the ballroom windows",
+  "category": "weddings",
+  "focus": "60% 55%",
+  "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoYAA8APu1kq04ppaQiMAgBMB2JQBOmUABqCtCEcgf3SVQFAADOGg0wKs/fmW4SMhS3Y5vEPn1Usbzdb9v3kG9B19EZFRhutjy8tOvkLfJ95FMdtV9+h4CiCRUAAA=="
+ },
+ "ballroom-empty": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1242,
+  "alt": "The ballroom set for a reception with a white-draped head table",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQBACdASoYAA8APu1iqU2ppaOiMAgBMB2JQBOmUGQ6iSw7KkXrVY2rNAD+xKUIDWJ8bc8bLLV2Uj3Y33cMBPWmnM6fU0oheUXzc6eSph7SCNrAAAA="
+ },
+ "ballroom-tables": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2508,
+  "height": 1522,
+  "alt": "Rows of dressed tables down the length of the ballroom",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwBACdASoYAA8APu1kq04ppaQiMAgBMB2JQBOmUABfZDua8MDUcdQjePAA/F2veJ7jRct+Z6vMM2+LeiTmQxkT6HgZ4gk3sh/KD4sq8veOxVLPg7f5c0AA"
+ },
+ "porch-guests": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2508,
+  "height": 1522,
+  "alt": "Guests mingling on the ballroom porch",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JQBYdg7qyULsOI3skAP5mYPMMFVy4UFxMikvmXjQTIvtgpOJLUF1oeougyF7CRJNx9Zu9XPnKkAAA"
+ },
+ "forest-table": {
+  "widths": [
+   800,
+   1600
+  ],
+  "width": 1600,
+  "height": 699,
+  "alt": "An intimate long table under string lights in the forest at night",
+  "category": "weddings",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYAAsAPu1mqk2ppaQiMAgBMB2JQBWABD4eXmtaXWHXMAAA/vF3OUiTdR1iv4P2jSC+gSEeeASet55PTlAgO6zhvwTmFMhLAMAAAA=="
+ },
+ "drinks-buffet": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1365,
+  "alt": "A drinks station set up on the lawn",
+  "category": null,
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZAAAP8b60YsEkM5QVsAA/h0CGGaMqx5wAzQ8HcT/UxNihcY/vb33v12B04tnMRzw3PtjPYwBo6srDHaOM6T0+ZWdgEAA"
+ },
+ "cocktails": {
+  "widths": [
+   800,
+   1600,
+   2048
+  ],
+  "width": 2048,
+  "height": 1365,
+  "alt": "Rows of ros\u00e9 sparkling wine in champagne flutes",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBACdASoYABAAPu1yrU+pp6QiMAgBMB2JZACdABiw+JkM2nTlYVVcAAD+3ug+QN/cw/rng4+6GRiej9ME6Lqg02gGyLkV34IC4pXD2WlgBnFvExrnF9+7Go3QAR5urRQYAAAA"
+ },
+ "corp-ballroom": {
+  "widths": [
+   800,
+   1600,
+   2364
+  ],
+  "width": 2364,
+  "height": 1773,
+  "alt": "The ballroom set with round tables for a corporate presentation",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQBACdASoYABIAPu1iqE2ppaOjMAgBMB2JQBOmWOgpno4sr7tkspPZPgIAAO4JIquP6mdAp+38equYWg04mSXkkSh4OZES1ED09H62xNCpnBu3BIcBOqnDbhEgnAAA"
+ },
+ "corp-dinner": {
+  "widths": [
+   800,
+   1600,
+   2364
+  ],
+  "width": 2364,
+  "height": 1773,
+  "alt": "An elegant corporate dinner set in the ballroom",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoYABIAPuVcpU2pJSOiMAwBIByJZQDG9A67yXOr80zHMpWgEAAA+b+MkzHqW/2LZnKiDSSjB0oF9+29/k2QxyVodttJVf2ETbUPG7o5/KcvCAC3MAAAAA=="
+ },
+ "corp-dinner-long": {
+  "widths": [
+   800,
+   1600,
+   2364
+  ],
+  "width": 2364,
+  "height": 1773,
+  "alt": "Long tables with burgundy runners set for a corporate dinner",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQBQCdASoYABIAPu1aqU2ppKOiN/VYATAdiUAXZnHYKxVpwMy9KTiRCfyyK0MJpSMwAP5p8jHl8//RFzsrmwZxP3Flk5K1EDsicNnz2sJ3fdbxuka1GhPXGcLstpVOEA7x98Gn4WyAgv2naAA="
+ },
+ "corp-awards": {
+  "widths": [
+   800,
+   1600,
+   2364
+  ],
+  "width": 2364,
+  "height": 1773,
+  "alt": "The ballroom set for an awards dinner",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQBACdASoYABIAPu1wsFKppiSiqAgBMB2JYwCuHAx8cqIFfPBpTma5121gAPt9Tfp9kSWZ1XmUd5RAi8NMFVbh3s8bnX4Iax0HYd7jG0NRYG94C3VcCy+In/zkpUOhKfRUTlEwAAA="
+ },
+ "corp-barn-banquet": {
+  "widths": [
+   800,
+   1600,
+   2364
+  ],
+  "width": 2364,
+  "height": 1773,
+  "alt": "A banquet lunch set in The Plantation barn",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwBACdASoYABIAPu1sq08ppiOiMBgIATAdiWMAtOgKVPj6iuPVlz129QF9sxZ0JwAA92Ug5V/r7bsRlykt6uZGb0iPZn75rSBeATO1meld3UgylnRcCvr8Kk6Fu2Dm9V9wlKEKTozRkDHD0aW8SPQAAAA="
+ },
+ "corp-barn-cocktail": {
+  "widths": [
+   800,
+   1600,
+   2364
+  ],
+  "width": 2364,
+  "height": 1773,
+  "alt": "A cocktail function in the barn lit in violet",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBQCdASoYABIAPu1srVEppaQiqAqpMB2JZACsM5M/UA2v+G8c/wnUJ8AgPo2A+msAAP5wc7wacjdIaTP2GTrJanMFWc6xyk8wGO7RCCmPJKlpaQK/MiAzDvoaVy4UmDcpeUT/QDsS+Vx6YGR/fEW10PgkEoZgGg0A58S4OAA="
+ },
+ "corp-african": {
+  "widths": [
+   800,
+   1600,
+   2364
+  ],
+  "width": 2364,
+  "height": 1773,
+  "alt": "A colourful African-themed corporate event",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwBACdASoYABIAPu1krE6ppaQiKA1RMB2JQBYdgeIM5UyTs24YV/jXWBS0jAhvMwQA/FyT9Ab0bpfTY5k2z6tYu3ucs1UZpFIJaPrrLqJR1WbLfQPBsi0j79r8RxXKbzxsAJxVgd4sXs85NmVmM7FyTIy+fc1SgAA="
+ },
+ "corp-conference": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 765,
+  "alt": "Delegates seated theatre-style for a presentation",
+  "category": "corporate",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACQBACdASoYABIAPuFeqU2opSQiMAwBEBwJYwCsAB6SBzVt0C1N8TpF7N9z9AAA/ftUV47eDko3XH9Ru3Kk7ft6Z6zOx6TO6uHXJgjcLtYP2OkbmS0KCm0i4KzSMMSwZRKfKsjo0fPTLuO8khaV6+lXxvTvAAAA"
+ },
+ "corp-networking": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "Guests talking over drinks on the lawn",
+  "category": "corporate",
+  "focus": "50% 40%",
+  "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoYABAAPu1Ct1apoqakGAEwHYlAFYADRpvauKoDsHGUeDgA/iXjjnj7etu6DC2JYmG0sDHBYupVxatuXf7HXbFKEpFE80k0GwwwCcRPV/znZpgDmqZC6jMANXWAAA=="
+ },
+ "breakfast-tray": {
+  "widths": [
+   800,
+   1600,
+   1920
+  ],
+  "width": 1920,
+  "height": 1280,
+  "alt": "A breakfast tray with fruit, pastries and pancakes",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZgCdACHDttztBL/FcgAA/rH1cZKrY7N2su9ZV+N+3O9wesdLuhMB9EosZmVP+uy2YVKjnEXzXWQh0V+pp8lQMAAAAA=="
+ },
+ "king-1": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The King Suite: a king bed against a navy feature wall",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoYABAALrV2u12jqampiYC0SgCdADJbfdaBC90tc6SbAAD98EbmTB8YKvpY0vObzZ3IsLAOTU/7q1vdy8G4mYyLbOHKCP0UNKJWZxAx6sbUbDjSnK0yXMhRAAA="
+ },
+ "king-2": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The King Suite lounge corner with striped armchair",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JaACdABXcVB+71yWkXdoAAPyhQ+cEBscIGfbWZkxPE/LEfsnUx23Hnkw6NdfdK+W2r5CRePetJmdF3332HdaYjV9FsGWxVLWAAA=="
+ },
+ "king-3": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The King Suite\u2019s private patio",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPu1oqk6ppiQiMAgBMB2JQAAj33meVuPX3WJ/inDAAP7yJ6qW9CZu7cNX32Vx7Idb2qWoc1jAEI3Ir/9oBCMNo+MmMcwFF0yEbXnAk7j1Qhv9bwAA"
+ },
+ "king-4": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The King Suite kitchenette",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoYABAAPu1kq04ppaQiMAgBMB2JQBOgA8MD9k3tBgGb1IAA/up9nwrn999fFNLJXMTQmBI3afLf58U7aoaTUm1UUHqLV3+lrZaQ3iQA"
+ },
+ "family-1": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The Family Suite with a double bed and single beds",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JYwC06Bxqik8ZbUpePAyAsUAA/uNNpBt8qWzuFP70NPU/nisiI3ay4zEuUuuS09Cuii2Qksg8RFYhV5YcdbnNPs9OmHJOGNCZfTAA"
+ },
+ "family-2": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The Family Suite under its pitched ceiling",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoYABAAPu1krU2ppaSiMAgBMB2JZQAAVOSlCLN86asXgNaAAP7jS1P531L1P8t+XIPEbBVU+krEK73UC+lHi+Uyq9DJoSjHH1pf8ofPFcWZP2yxhRoAAA=="
+ },
+ "family-3": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The Family Suite patio in the garden",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZQAATvzo6g6JxJOIx+4AAP4Ay6ayKSPqCr+egQOK/MBh6gn2e9V0HlvrhpFtNmB8Efw3P3+4umzOXNAAAA=="
+ },
+ "family-4": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The Family Suite kitchenette",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoYABAAPu1mqk4ppaOiMAgBMB2JZwAASSinHEynzXahAAD+sIF0x+FBX4r4q9nhe7YWI1zSk0mOhC1xAmg+0JxnqQFAAA=="
+ },
+ "honeymoon-1": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The Honeymoon Suite: a sleigh bed beneath floral wallpaper",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACQBACdASoYABAAPu1kq04ppaQiMAgBMB2JYgCdMoADTltgg3Y1z5n/UULWiAAA/u0+0CscsFsk1pcQQaeByANdD6P72ZOu+pL7ksRI0q4JxDN9RJ9yLRUSgEzMXezYzgxurkaDeHjr5AAA"
+ },
+ "honeymoon-2": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The Honeymoon Suite with its chandelier and robes",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoYABAAPu1mq04ppaQiMAgBMB2JQBOgBDvo33nu1WqneyKMAAD+5yloxm7i87SVmahTzzlbd7BcHskQRHd41pma4hwoLLj4mF0gdFYaV4vACZNDYfiHgAAA"
+ },
+ "honeymoon-3": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "Two red damask armchairs in the Honeymoon Suite",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JagCdMoACreMRWepRu6Rug9AAAP7tYan3rd006HmDl1W2qGTfQ7P5SucoSf//cw3LB9FrYuOdGDk4Qt0BeWGKceoM/quwnssexc5UuccaJpwAAAA="
+ },
+ "honeymoon-4": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "The Honeymoon Suite opening onto the forest",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoYABAAPu1kqU2ppaOiMAgBMB2JQAAHZsWePTyyMrUnLaAA/uy2fNR/mz5SsS0Sb/TEhDkK9n7ZFxIDeqOpcBVOllfTO7JeCc5ZM1qogPsehrSwbBqAAA=="
+ },
+ "bridal-boudoir": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 765,
+  "alt": "The French-inspired Bridal Boudoir dressing room",
+  "category": "weddings",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwBACdASoYABIAPu1orlCppaQiqAqpMB2JYwDKABEIuuT8wlKLQe1mC7YgD6MxgAAA/q8HNYAl9yQ15SnvO+1KFQKL13d1fxsEBEXfYs4FfRB4umO/eOpD9QR6vYjVpgXe6narbxNNAAAA"
+ },
+ "bath": {
+  "widths": [
+   800,
+   1020
+  ],
+  "width": 1020,
+  "height": 700,
+  "alt": "A freestanding basin and bath with amenities",
+  "category": "accommodation",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQBACdASoYABAAPu1oqk6ppiQiMAgBMB2JZQC06CHgah4cx67xoZ3b6AD+i7HfYUn3XHU2+Y5Fp4+5FM1MUj2ZqbTrSvh+5YAAAA=="
+ },
+ "dish-lamb": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1664,
+  "alt": "Lamb chop duet",
+  "category": "cuisine",
+  "focus": "50% 45%",
+  "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoYABAAPu1krU6ppaSiMAgBMB2JQBlABDYAQ6CiCaz0V8nAAP7vv5HYCVcCto/uaPmZlhPT0ERnnc1dk2uC+hk60W/HfaM3bYzzhTG9lkwd67/uRUpZ7LVZ1JbmdMBZkig4AAAA"
+ },
+ "dish-karoo": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 3757,
+  "alt": "Karoo feast",
+  "category": "cuisine",
+  "focus": "50% 45%",
+  "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoQABgAPu1kqk4ppaQiMAgBMB2JbAC06CFmMlY1aD8GvkYrkcAA/tpSP0pONTMXdVWEfebWDZ81VOJVATvmk6x8eKUM59CwzeSKCdPUSPv9plA/WmOzwZqc2UoXkh99ogAAAA=="
+ },
+ "dish-oxtail": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Oxtail",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBACdASoYABAAPu1kqk4ppaQiMAgBMB2JZACdACPmnbfD+1MHGwMWZA2ccAD+QSZU9Sx08HIYPb5W02L+vd6BAZ18BzG09W7Y22mml9Vs33haMQ7ts+CobyLyWyIz2Dq2hUF57/IEVs5Zu8K8ueCaEyHFlxRdB2LMVxQbAoAAAA=="
+ },
+ "dish-xhosa": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Xhosa feast",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbAC7AB5vkMjff3duAb9oGgAAzhh8VEePz8/GsLRFxrlqIlDzQevyIHOjs9ny3bpkVXImUmtZbdBCAMxnRxdAehDCiYUUyN7h2LMbo0GUgN8F+ZdUh7PK/AA="
+ },
+ "dish-roulade": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Chicken roulade",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoYABAAPu1kq04ppaQiMAgBMB2JYgC7ACIfTIDmizzSUBB4eAD+kbvykySSLRc8oARl4++otVWZFOwXC/SkMQT0yYKxMndmjEif5G58ggBzRVdBKLQb2sc1/v2/tOi/qI9tEmtErCrq02zl5idQgYQA"
+ },
+ "dish-brownie": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Chocolate brownie cheesecake",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoYABAAPu1mq04ppaQiMAgBMB2JZQC7ACGUYj/OVtC22VQA/tpjDRDUVqVcmJW5Pulb2wSpdqivvMFz++PX33SHycNYytDYCx5B/ZkL0lDmcYrMrhV3/KDNTU6+MbuxXnQg2Ns+AAA="
+ },
+ "dish-jars": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Dessert jars",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoYABAAPu1mqk4ppaOiMAgBMB2JQBOmUABppm7YbqWUSWzeAAD+62RZ4ZuSKvGqeLhDvIbcjzbspPgC4Xf/oHgidbIXtBr6rDm5GSlKeJ2HO8OenulJ/KC/QAA="
+ },
+ "dish-bunny": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Mini bunny chow canap\u00e9s",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaACsLwAB0oz6BmE/e4FvNosgAP3jtnElNwoPEuEgyHeCvOW/CYOKxMxSWSDI8UORUyNidLIkcotAoTe23u/2T+WLi4aQXa+vokwLGCwT8Qb1/7ol9f4AAAA="
+ },
+ "dish-boerewors": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Boerewors canap\u00e9s",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoYABAAPu1kqU4ppaOiMAgBMB2JQBYdhDd5ChjJGXo39WLIAMtOlyFVu5Se8W6r5iuWxFJIwqPzAZrJEwMCbDKfq2LKKH6T+ggbiYWaDDMjDEAVpH2AC2vcTW46UgFIn9c8eELmi4h4yWGH8AA="
+ },
+ "dish-burger": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2507,
+  "height": 1672,
+  "alt": "Mini burger street-food canap\u00e9s",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoYABAAPu1kqU2ppaQiMAgBMB2JZgCdABl7E3mbxoQOrgUwgAD+ZUyFlb3Ru4otVZv67QqlUy3D6MFu6anbOqcWLDDLOmZ5SE8yqPkUuw3+pM4KO6XHRYwVZAA="
+ },
+ "dish-nachos": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2508,
+  "height": 1672,
+  "alt": "Nacho street-food canap\u00e9s",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoYABAAPu1kqU2ppaOiMAgBMB2JaACdABhHyVjyj6RjEqAA/b3UYaV/JH1nfUsJeUKAne6zabFSM7xwGMatb1fgpHvrioaUSDL4ert5RJsz8EOukogAAA=="
+ },
+ "dish-salmon": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Smoked salmon starter",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZgCdMoMYAEi1QLDfp0NQlFrW0CoAAP5gAoAC0Rs6Ee2namdBp3APr1qZnn9oDs+q9IO2drosoVgx7ggh7OBvIsTKnB3TQ2D80AAA"
+ },
+ "dish-calamari": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Calamari starter",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JagC06BUGcvqvNnjpb98FiqAA/uWYgsrLrit9io9OdQp4+/XK0ecLLeV2or+O+mHagkh/gNAE82lhmIrXSQMOAyVo77nbW0cVZn48+xQfPQ1gAAA="
+ },
+ "dish-marrow": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Marrow bone starter",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwBACdASoYABAAPu1iqk4ppaQiMAgBMB2JaACdMoR4GCm+d3SnWcCX2kpxjAD+7U7gqNHvCfvjJ5H4UjCguZP25Ws/YYPUxrO6WbVfPr8W90dLKgE2a9WJ3mVppBNIqXDLa0sYwsBeGmOAAAA="
+ },
+ "dish-salad": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Biltong salad starter",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoYABAALrV2u12jqampiYC0SyAFYAFApffwSb9sTD2AAM3KFsQ1yFJK4E1QAFUeE/MZHN8IYg9hhMEAplnO/G5A9IbK09YaRz44wtt/59Ffv1QwUIAAAA=="
+ },
+ "dish-potatoes": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2500,
+  "height": 1663,
+  "alt": "Baby onion potato canap\u00e9s",
+  "category": "cuisine",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JYgCdIBgDAa5JpZrMO3Iq9UAA/uemzo4uzo6/n1GW4xaT5zJUN8Zl3p1JrVVGGUlIHbm+CbmaLymktvNn5l4w0urUp67mTBm8AAAA"
+ },
+ "boma-courtyard": {
+  "widths": [
+   800,
+   1600,
+   1920
+  ],
+  "width": 1920,
+  "height": 1458,
+  "alt": "The Boma\u2019s cobbled forest courtyard leading to the glass-enclosed restaurant",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwBACdASoYABIAPu1osFAppaSiqAqpMB2JYwDDcA3S+mDEyxotr2fvfkikRZyNaAAA8MVGSX4c2LqN709Nnd9BBfFwnFhiijJFb38NxvMVScT6DIgXZHwT7dRgPMJv6wcAAA=="
+ },
+ "boma-bonfire": {
+  "widths": [
+   800,
+   1600
+  ],
+  "width": 1600,
+  "height": 1067,
+  "alt": "A celebration set up beneath the trees at The Boma",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JQAAKlggNxbpQ3AIioADzooYrGmuh0u0rPsLeGFkasJ/MF0MmFDY7hlz7saow5+l/O5u7f+xO9uQYbwY2ld+IdI38oLwYYIJeAAAA"
+ },
+ "boma-ceremony": {
+  "widths": [
+   800,
+   1536
+  ],
+  "width": 1536,
+  "height": 1024,
+  "alt": "A ceremony aisle of petals and wooden chairs on The Boma\u2019s forest lawn",
+  "category": "boma",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JYwAAPWLC9ioPJlveuQAA/r9+nUqNNnz2FwRQncvBqDypQjvt1Bp2zh70o4Zizk+pvo3sZ4AAAA=="
+ },
+ "boma-forest-wedding": {
+  "widths": [
+   800,
+   1600
+  ],
+  "width": 1600,
+  "height": 1067,
+  "alt": "Guests gathered for a ceremony in the forest at The Boma",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoYABAALrV2u12jqampiYC0SygABc7MOhDnxfSxrIAA/vkXCnb3YV/KIgSUCahVP9fp6jt2yrK8XdeFHpgAAA=="
+ },
+ "boma-garden": {
+  "widths": [
+   800,
+   1600
+  ],
+  "width": 1600,
+  "height": 1067,
+  "alt": "The Boma\u2019s secret garden path lit by paper lanterns",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoYABAAPu1orU2ppqSiMAgBMB2JZQC7ABn5VB7K/fu6ZwaAAP7ccAtsnEYERffcYoxfN4TzKH9et8vM20cH2rFfPL0KNjT93NiAAA=="
+ },
+ "boma-night": {
+  "widths": [
+   800,
+   1362
+  ],
+  "width": 1362,
+  "height": 2048,
+  "alt": "A couple dancing at night at The Boma",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoQABgALrV2u12jqampiYC0SxgE6ZQANakc8Cvbg8H/bGAA/vLmDktYaRet8TwnnPUAUMF2ZMktRU2xuqNm8RrTEJlZnVFTrI5MpGAAAAA="
+ },
+ "boma-seating": {
+  "widths": [
+   800,
+   1366
+  ],
+  "width": 1366,
+  "height": 2048,
+  "alt": "Tables set inside The Boma\u2019s timber-walled restaurant",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoQABgAPu1mqk4ppaOiMAgBMB2JQBOgBH5yA52WaE6jqNrgAP7xEA/hNu66185o2bOgrmQqgrPkctKunCj1/52hXS9jOngZZqd3N4Hz/fAAAA=="
+ },
+ "boma-banquet": {
+  "widths": [
+   800,
+   1600
+  ],
+  "width": 1600,
+  "height": 1064,
+  "alt": "A couple cutting their cake inside The Boma",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JQBYdg9Ft05UMyKvLUuv3wAD+72MoM4r4OBU4ZB+rP1ia2ihyuUpUP20QU81k9zt0aIp0pm6GJANZzajAAA=="
+ },
+ "boma-potjies": {
+  "widths": [
+   800,
+   1024
+  ],
+  "width": 1024,
+  "height": 683,
+  "alt": "Cooks serving from three-legged potjie pots",
+  "category": "boma",
+  "focus": "50% 45%",
+  "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JagCdMoABnXbFhm7ClGeAAP7c08ndM3plkabJaI7CnewbsGKbk9/Anr/J5MczN/jS+MaU4VXePjWj9fYvwZX96oYroOvRsjzEwYoyAZhSd5Rw8fwmb2ofvswAAA=="
+ },
+ "boma-drumming": {
+  "widths": [
+   800,
+   1065
+  ],
+  "width": 1065,
+  "height": 1065,
+  "alt": "A drumming and dance performance at The Boma",
+  "category": "boma",
+  "focus": "50% 40%",
+  "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBQCdASoYABgAPu1krU4ppaSiKA1RMB2JQBajbIAUPVD9KI4TR2wwXN/b1GW1AQmdgAD+qKBaXXoKUCKOMsbFmz18uW0x9xv8e9CV1xEPH/UCi0be/gWQg+b3DCNtcCqkDmuHXrnZ1spPf+kv4RFeE15mqbccs067RuWvxGv5RR8WVOSfvt0IzwO+AIiD0kTQAAAA"
+ },
+ "boma-drinks": {
+  "widths": [
+   800,
+   1600
+  ],
+  "width": 1600,
+  "height": 1064,
+  "alt": "A welcome table of drinks and treats on the lawn",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoYABAAPu1iqU2ppaQiMAgBMB2JYgCdMoACJHiNRxFo1llWAAD6a9vMm7LX/Ys7P1KUWvkLTIaaFDXyz7t6kT2alTQZEeU0fUO20T7W73Cncf2rHHYF8AS6heSyOfM+DerFhHAA"
+ },
+ "boma-cottage": {
+  "widths": [
+   800,
+   1600
+  ],
+  "width": 1600,
+  "height": 1200,
+  "alt": "The twin bedroom in The Boma\u2019s cottage",
+  "category": "boma",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBQCdASoYABIAPu1srlIppaQiqAgBMB2JYwCxH47BMfn/tnuRZySrRfLVzbXDM8FAAP6JD3dM9dDFSSj1Cvy21b2AabZUFFqyNhNxNZRtRUdS6looFNIjLQiLsMhQCyRvHRbio51UqF/X77a2qjXCp77R+BGlueMSOFAA"
+ },
+ "church-pool": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1000,
+  "alt": "The pool at 39 on Church framed by palms and the garden",
+  "category": "church",
+  "focus": "50% 55%",
+  "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbAC+SB7FJuyAEoDxie7hOwAA+FukyjrDwkcZ1pYlxK6lJYhedfHbo2a8Sn9KJp3aDWesmfVvbZqkdH+7KGUr9i+vlMN1A4swRD7u0Ns4zzbGW8VgTYAA"
+ },
+ "church-patio": {
+  "widths": [
+   800,
+   1000
+  ],
+  "width": 1000,
+  "height": 750,
+  "alt": "Morning sun over the pool terrace at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBQCdASoYABIAPu1krE+ppSQiMBgIATAdiWUAt7gNxcd5S6+l3+wKok5o1rtRJHFgAP7ZIXley4yK1s6/YZ6ACSXaRnfkHS55uA0ZUBHisJYxTrTM8u/uNdCXGBdrVRSEeOe+3K5OKalaidsFIrjNkAAAAA=="
+ },
+ "church-king": {
+  "widths": [
+   800,
+   1440
+  ],
+  "width": 1440,
+  "height": 960,
+  "alt": "The King suite at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JYgC2yBuYGSx9M9ru1QQA/NewBDhPiwxc1Xs0PleGZ22I+iDfZ/sZ8TGRy5ssmeXGIzc+gkrtUBsIkvJUzebIduxSf71XECUAAA=="
+ },
+ "church-queen": {
+  "widths": [
+   800,
+   1600,
+   1714
+  ],
+  "width": 1714,
+  "height": 1286,
+  "alt": "A queen suite at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwBACdASoYABIAPt1epE2opaOiN/qoARAbiWUAsOwMVIn33xJ4sOMBANN+AAD+gI7CDJGP3t6BPY1Im2efRZvY5en4W2WX0wJxHOOYdmen8u2CczYCnX7BN2eVLOZ38ufkfT6nYeciNgoP1KcAAA=="
+ },
+ "church-queen-2": {
+  "widths": [
+   800,
+   1600,
+   2016
+  ],
+  "width": 2016,
+  "height": 1512,
+  "alt": "A queen suite with garden view at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBQCdASoYABIAPu1qsVAppiUiqAqpMB2JZQC/OBF+MIRLHi7eVHM6kN1w7nT/oiOAAPYLSJF2syJzZMuJnMITAdEWAGXov9RvrKT0P/j7NMT1H3dnN1pXDzBHDk7OQwnt9QstHOJQsqawIPpOasFbsRuAAA=="
+ },
+ "church-twin": {
+  "widths": [
+   800,
+   1600,
+   2400
+  ],
+  "width": 2560,
+  "height": 1920,
+  "alt": "A twin suite at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwBACdASoYABIAPu1qrlCppaQiqAqpMB2JZwDE2AxRrPDY1VeBuc0ZY9eul0uAAPUQnyuiZ/v+RVWX2wT5P4H7cycogqIUQNstlp6V9Nl54ZjEJzkYXGNgWup9SSf+AAA="
+ },
+ "church-family": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1000,
+  "alt": "The family suite at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPu1mq04ppaQiMAgBMB2JZQCsABmjubcZDkTT7wPjAAD+V3+djAWdyaCwUaOd8+Rnji+I4G0WVH9FTr9RVUQr9iC6zmDmYqAj3lOZLl9oc+aDUY12g0k3qDeeHyAAAA=="
+ },
+ "church-cottage": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1000,
+  "alt": "The bedroom of the self-catering garden cottage",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwBACdASoYABAAPu1Ct1apoqakGAEwHYloAJ0yhHAAfUk0llvDARlBJ7OjlbzAAP6NzRDVsRUYq3r70nNTxRCDlK0vOpjHuxn/10m7Drn3GBneviz8mxm9Tmy0rE2nhrO7XhVEp0S+1tB1IAA="
+ },
+ "church-lounge": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1000,
+  "alt": "One of the two lounges at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JYgCdMoR3ACm4lN2AAaR4ZssAAP6XR8YlJ+LABh6b3wBME3eZAKjppsKoehgktCeofVMZDBSOKAbH+5t074LsQZDdz5rKE+wAAA=="
+ },
+ "church-dining": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1000,
+  "alt": "The sunny breakfast room at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYABAAPu1mq04ppaQiMAgBMB2JYwC+SB5Pesv6yifZgAD+xNNOWm8LAIK9AYZXJDoXsuSFGxC1taU/qLtmfibvGU2mIqbmmIWwXCAjMhs6rD3ogWAAAA=="
+ },
+ "church-breakfast": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 2000,
+  "alt": "Breakfast served at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQBACdASoSABgAPuVgpk2pJaOiN/VYASAciWUArhwO+xSEEoC5gVtbv0PpjAAA/qagWSaLuDoRbW2XnlcCq7cnEvTCC5hW4YHHHYm3pgtnTBQuRti7aDAIXCwoXUQGkSyBrOmhrYAAAA=="
+ },
+ "church-bar": {
+  "widths": [
+   800,
+   1024
+  ],
+  "width": 1024,
+  "height": 683,
+  "alt": "The honesty bar and lounge at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoYABAAPu1oqk6ppiQiMAgBMB2JZgCdMoAB7UTwMvK8iphUAOIF0xPGYwkjyvOO28rJTl9y07ObfwSxcenT6B+aWKhiJasYDEL5+HY/6gmohXN9QOE3OSyvkHwpP5MrK7vmcgcR6SxfAAAA"
+ },
+ "church-conference": {
+  "widths": [
+   800,
+   1440
+  ],
+  "width": 1440,
+  "height": 960,
+  "alt": "The conference room set in a U-shape",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JQBOgBHt4bpyPA9j2ymFwAP0PpS8CoWVEYGvBY0pbgt/jxaixryaKFppiQwcr6GsYw7oFigeOoy/WadJ5+bMDsSbDzsgA"
+ },
+ "church-conference-2": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1000,
+  "alt": "The fully equipped conference room at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoYABAAPu1mqk2ppaQiMAgBMB2JQBYdg9h/dTqblr23KeAA4YJNihyWodPE6IbYh4encQa3HUlNQTtSJievIb6wkYQyOElO1c1wnrPJTMaP20iLoAA="
+ },
+ "church-boardroom": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1000,
+  "alt": "The boardroom at 39 on Church",
+  "category": "church",
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoRwAB8WKOjUL6EhPH6AAP6RdBO1YfKL6X8cPwdCOjwgrmt+h8Sxsx5zVym6vUZBNEW0g82X0T2uq5P35RpTnirftc6XR/dDyL/gU2XeQAA="
+ },
+ "church-addo": {
+  "widths": [
+   800,
+   1500
+  ],
+  "width": 1500,
+  "height": 1125,
+  "alt": "Elephants at Addo Elephant National Park",
+  "category": null,
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoYABIAPu1iqE2ppaOiMAgBMB2JYwDDNB0lGnvjV7knjNMIfbAA/RxoJS2xt76ydzZxJ7lAZmpQtDzj27VToh1P6l4Sn8WMijDhl3aRd7iw+maAAAA="
+ },
+ "church-sardinia": {
+  "widths": [
+   800,
+   1024
+  ],
+  "width": 1024,
+  "height": 768,
+  "alt": "Sunset over the dunes at Sardinia Bay",
+  "category": null,
+  "focus": "50% 50%",
+  "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoYABIAPu1qrE8ppiQiMBgIATAdiWMAyywPQcH/WGJEGrG5QADKshQ7H4aG96hr9TtWHDgLHKozFe0O+kHX7WlduJjk5BCKFZZwAA=="
+ }
+}

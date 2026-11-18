@@ -1,0 +1,176 @@
+# CI/CD (from the fullstack-website starter)
+#
+#   pull_request  → verify
+#   push to main  → verify → build & push both images (GHCR) → deploy over SSH
+#
+# "verify" builds the real production Docker stack on GitHub's runner and runs scripts/smoke-test.sh,
+# the same test used locally, so nothing reaches the server unless the whole stack works.
+#
+# Repository secrets (Settings → Secrets and variables → Actions):
+#   DEPLOY_HOST      server hostname or IP
+#   DEPLOY_USER      SSH user on the server (in the docker group)
+#   DEPLOY_SSH_KEY   private key for that user (ed25519 recommended)
+#   DEPLOY_PATH      folder on the server holding this site, e.g. /srv/<site-name>
+#   DEPLOY_PORT      optional, SSH port (defaults to 22)
+# Repository variables:
+#   DEPLOY_ENABLED   "true" to switch deploying on. Leave it unset until the server is ready.
+#   SITE_URL         optional, e.g. https://example.co.za (linked on the deployment and checked after deploying)
+#
+# One-time server setup is in README.md ("Deploying with GitHub Actions"). In short: create DEPLOY_PATH with a filled-in .env,
+# and log the server in to GHCR once (docker login ghcr.io with a token that has read:packages).
+
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Build and test the full stack
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            frontend/package-lock.json
+            backend/package-lock.json
+
+      - name: Install
+        run: |
+          npm ci --prefix frontend --no-audit --no-fund
+          npm ci --prefix backend --no-audit --no-fund
+
+      - name: Build the site and admin
+        run: npm run build --prefix frontend
+
+      - name: Backend syntax check
+        run: find backend/src -name '*.js' -print0 | xargs -0 -n1 node --check
+
+      - name: Throwaway .env for the test stack
+        run: |
+          rnd() { openssl rand -hex "$1"; }
+          sed -e "s/^MYSQL_PASSWORD=.*/MYSQL_PASSWORD=$(rnd 16)/" \
+              -e "s/^MYSQL_ROOT_PASSWORD=.*/MYSQL_ROOT_PASSWORD=$(rnd 16)/" \
+              -e "s/^JWT_SECRET=.*/JWT_SECRET=$(rnd 32)/" \
+              -e "s/^ADMIN_EMAIL=.*/ADMIN_EMAIL=ci@example.com/" \
+              -e "s/^ADMIN_PASSWORD=.*/ADMIN_PASSWORD=$(rnd 12)/" \
+              .env.example > .env
+
+      - name: Smoke test (production Docker stack)
+        run: ./scripts/smoke-test.sh
+
+      - name: Logs if it failed
+        if: failure()
+        run: docker compose logs --tail=100
+
+  image:
+    name: Build & push ${{ matrix.service }} image
+    needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        service: [frontend, backend]
+    steps:
+      - uses: actions/checkout@v4
+      # GHCR image names must be lowercase
+      - id: name
+        run: echo "image=ghcr.io/${GITHUB_REPOSITORY,,}-${{ matrix.service }}" >> "$GITHUB_OUTPUT"
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ steps.name.outputs.image }}
+          tags: |
+            type=sha,format=short
+            type=raw,value=latest
+      - uses: docker/build-push-action@v6
+        with:
+          context: ./${{ matrix.service }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=${{ matrix.service }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.service }}
+
+  deploy:
+    name: Deploy to the VPS
+    needs: image
+    # Switched off until the server is ready: set the repository variable DEPLOY_ENABLED to "true"
+    # (Settings → Secrets and variables → Actions → Variables) once the secrets below and the VPS are set up.
+    # Until then this job is skipped and runs stay green.
+    if: vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: production
+      url: ${{ vars.SITE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: images
+        run: |
+          base="ghcr.io/${GITHUB_REPOSITORY,,}"
+          tag="sha-${GITHUB_SHA::7}"
+          echo "frontend=$base-frontend:$tag" >> "$GITHUB_OUTPUT"
+          echo "backend=$base-backend:$tag" >> "$GITHUB_OUTPUT"
+
+      # Keep the server's compose file and deploy script in step with the repo. Nothing else is copied:
+      # the server runs the images, and its .env, database and uploads are never touched.
+      - name: Upload docker-compose.yml and deploy script
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          port: ${{ secrets.DEPLOY_PORT || 22 }}
+          source: docker-compose.yml,deploy/deploy.sh
+          target: ${{ secrets.DEPLOY_PATH }}
+
+      - name: Back up, pull, restart, health-check (rolls back on failure)
+        uses: appleboy/ssh-action@v1
+        env:
+          FRONTEND_IMAGE: ${{ steps.images.outputs.frontend }}
+          BACKEND_IMAGE: ${{ steps.images.outputs.backend }}
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          port: ${{ secrets.DEPLOY_PORT || 22 }}
+          envs: FRONTEND_IMAGE,BACKEND_IMAGE
+          command_timeout: 12m
+          script: |
+            set -e
+            cd "${{ secrets.DEPLOY_PATH }}"
+            chmod +x deploy/deploy.sh
+            ./deploy/deploy.sh "$FRONTEND_IMAGE" "$BACKEND_IMAGE"
+
+      - name: Check the live site
+        if: vars.SITE_URL != ''
+        run: |
+          curl -fsS --retry 5 --retry-delay 5 -o /dev/null "${{ vars.SITE_URL }}/"
+          curl -fsS --retry 5 --retry-delay 5 "${{ vars.SITE_URL }}/api/health" | grep -q '"database":"connected"'

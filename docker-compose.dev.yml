@@ -1,0 +1,18 @@
+# LOCAL DEVELOPMENT ONLY. Never use this file on the VPS.
+# Opens the API and the database on this computer (127.0.0.1 only) so the Vite dev server
+# (npm run dev in frontend/) and database tools can reach them:
+#
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build database backend
+#   cd frontend && npm run dev
+
+services:
+  backend:
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-3000}:${BACKEND_PORT:-3000}"
+    environment:
+      NODE_ENV: development
+      TRUST_PROXY: 1
+
+  database:
+    ports:
+      - "127.0.0.1:${DB_PORT:-3306}:3306"

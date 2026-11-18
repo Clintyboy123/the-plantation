@@ -1,0 +1,89 @@
+# One self-contained stack per website: frontend (Nginx + React build), backend (Express API), database (MySQL).
+# The project name comes from COMPOSE_PROJECT_NAME in .env, which keeps this site's containers,
+# network and database volume separate from every other site on the VPS.
+
+services:
+  frontend:
+    # On the VPS, GitHub Actions sets FRONTEND_IMAGE to the image it built (ghcr.io/...:sha-<commit>) and the
+    # server only pulls it. Locally it is unset, so "build" makes the image from ./frontend.
+    image: ${FRONTEND_IMAGE:-${COMPOSE_PROJECT_NAME:-theplantation}-frontend}
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      # Bound to 127.0.0.1 so only the VPS-level Nginx can reach it. Without the 127.0.0.1,
+      # Docker would open the port to the internet and bypass the firewall.
+      - "127.0.0.1:${FRONTEND_PORT:?Set FRONTEND_PORT in .env}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - app
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  backend:
+    image: ${BACKEND_IMAGE:-${COMPOSE_PROJECT_NAME:-theplantation}-backend}
+    build: ./backend
+    restart: unless-stopped
+    # No "ports": the API is only reachable inside this stack's network, through the frontend's /api proxy.
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      APP_NAME: ${APP_NAME:-Website}
+      PORT: ${BACKEND_PORT:-3000}
+      TRUST_PROXY: ${TRUST_PROXY:-2}
+      DB_HOST: ${DB_HOST:-database}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_NAME: ${MYSQL_DATABASE:?Set MYSQL_DATABASE in .env}
+      DB_USER: ${MYSQL_USER:?Set MYSQL_USER in .env}
+      DB_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD in .env}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      MAIL_FROM: ${MAIL_FROM:-}
+      MAIL_TO: ${MAIL_TO:-}
+      MAIL_TO_BOMA: ${MAIL_TO_BOMA:-}
+      MAIL_TO_CHURCH: ${MAIL_TO_CHURCH:-}
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - app
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:' + process.env.PORT + '/api/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+
+  database:
+    image: mysql:8.4
+    restart: unless-stopped
+    # No "ports": MySQL is never reachable from outside this stack.
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in .env}
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app
+    healthcheck:
+      # 127.0.0.1 (not localhost) so the check only passes once MySQL accepts real network connections.
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  db_data:
+
+networks:
+  app:
