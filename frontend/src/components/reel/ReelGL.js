@@ -165,6 +165,10 @@ export default class ReelGL {
       const img = new Image();
       img.decoding = 'async';
       img.onload = () => {
+        // A photo that finishes loading after this reel was torn down (page left, or React mounting twice)
+        // must not be uploaded: its texture is gone, and the upload would land in whichever texture is
+        // bound at the time, i.e. another card's photo, at the wrong proportions.
+        if (this.destroyed || !gl.isTexture(entry.tex)) return;
         gl.bindTexture(gl.TEXTURE_2D, entry.tex);
         gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
         gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);
@@ -223,6 +227,7 @@ export default class ReelGL {
   // (development double-mount), and a deliberately lost context cannot be reused.
   destroy() {
     const { gl } = this;
+    this.destroyed = true;
     this.textures.forEach((t) => gl.deleteTexture(t.tex));
     this.textures = [];
     gl.deleteProgram(this.prog);
