@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import photos from '../content/photos.json';
 import { floatIn, viewportOnce } from '../utils/motion';
+import { BASE } from '../utils/asset';
 import { useFrameTone } from './Frame';
 
 // Every photograph on the site goes through here: responsive WebP sizes, a blurred placeholder while
@@ -38,8 +39,8 @@ export default function Photo({
     return null;
   }
 
-  const srcSet = photo.widths.map((w) => `/photos/${name}-${w}.webp ${w}w`).join(', ');
-  const src = `/photos/${name}-${photo.widths[Math.min(1, photo.widths.length - 1)]}.webp`;
+  const srcSet = photo.widths.map((w) => `${BASE}photos/${name}-${w}.webp ${w}w`).join(', ');
+  const src = `${BASE}photos/${name}-${photo.widths[Math.min(1, photo.widths.length - 1)]}.webp`;
   // Framed photos float in from blur as they scroll into view (reveal={false} opts out)
   const useReveal = !reduce && (reveal === true || typeof reveal === 'string' || (tone && reveal !== false));
   const useParallax = parallax && !reduce;

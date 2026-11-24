@@ -1,0 +1,71 @@
+# GitHub Pages preview: https://clintyboy123.github.io/the-plantation/
+#
+# Builds only the frontend, served from /the-plantation/. There is no backend here, so the enquiry
+# forms show a "preview only" message (VITE_PREVIEW) instead of saving. The real site is the Docker
+# stack on the VPS (ci-cd.yml). The preview is marked noindex so it never competes with theplantation.co.za.
+#
+# One-time setting: Settings → Pages → Build and deployment → Source: "GitHub Actions".
+
+name: Pages preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - frontend/**
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install
+        run: npm ci --prefix frontend --no-audit --no-fund
+
+      - name: Build for /the-plantation/
+        run: npm run build --prefix frontend
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_PREVIEW: 'true'
+
+      # noindex keeps search engines on the real domain. 404.html lets deep links and refreshes
+      # (e.g. /the-plantation/weddings) load the app, which then shows the right page.
+      - name: Prepare for Pages
+        run: |
+          cd frontend/dist
+          sed -i 's#<head>#<head><meta name="robots" content="noindex, nofollow" />#' index.html
+          cp index.html 404.html
+          rm -f robots.txt sitemap.xml
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

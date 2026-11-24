@@ -6,6 +6,7 @@ import Frame from './Frame';
 import ReelGL from './reel/ReelGL';
 import { useSmoothScroll } from '../context/SmoothScroll';
 import { ease } from '../utils/motion';
+import { BASE } from '../utils/asset';
 
 // "The Plantation experience" as a cinematic reel (after siena.film).
 // Pinned section; each moment of the wedding day is one large gold-framed card.
@@ -94,7 +95,7 @@ function Reel({ moments, cta, ctaLabel }) {
         const p = allPhotos[m.photo];
         const wMax = p.widths[p.widths.length - 1];
         const focus = (p.focus || '50% 50%').split(' ').map((v) => parseFloat(v) / 100);
-        return { src: `/photos/${m.photo}-${wMax}.webp`, aspect: p.width / p.height, focus };
+        return { src: `${BASE}photos/${m.photo}-${wMax}.webp`, aspect: p.width / p.height, focus };
       })
     );
     let raf;
