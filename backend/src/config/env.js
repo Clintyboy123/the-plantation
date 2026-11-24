@@ -29,6 +29,18 @@ const env = {
     toChurch: process.env.MAIL_TO_CHURCH || '',
   },
 
+  // Admin sign-in. JWT_SECRET signs the session cookie; ADMIN_EMAIL / ADMIN_PASSWORD are read only by
+  // the admin seeder, which creates (or resets) the venue's login.
+  jwtSecret: process.env.JWT_SECRET || '',
+  sessionDays: 7,
+  admin: {
+    email: (process.env.ADMIN_EMAIL || '').trim().toLowerCase(),
+    password: process.env.ADMIN_PASSWORD || '',
+  },
+
+  // Specials expire on South African dates, whatever the server's own time zone.
+  timeZone: 'Africa/Johannesburg',
+
   db: {
     host: process.env.DB_HOST || '127.0.0.1',
     port: Number(process.env.DB_PORT || 3306),
@@ -42,6 +54,7 @@ const missing = Object.entries({
   'DB_NAME / MYSQL_DATABASE': env.db.name,
   'DB_USER / MYSQL_USER': env.db.user,
   'DB_PASSWORD / MYSQL_PASSWORD': env.db.password,
+  JWT_SECRET: env.jwtSecret,
 })
   .filter(([, value]) => !value)
   .map(([name]) => name);

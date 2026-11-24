@@ -7,6 +7,8 @@ import { Checkbox, Input, Select, Textarea } from './ui/Field';
 import { options, paths } from '../content/enquiry';
 import { boma, booking, church, site } from '../content/site';
 import { sendEnquiry } from '../services/enquiries';
+import { extraPackageChoices } from '../services/specials';
+import useSpecials from '../hooks/useSpecials';
 import { ease } from '../utils/motion';
 
 // One enquiry form, six audiences. Each type asks only what its team needs; the API validates
@@ -110,6 +112,8 @@ export default function EnquiryForm({ type, tone = 'light', submitLabel = 'Send 
   const dark = tone === 'dark';
   const common = { tone };
   const show = useMemo(() => new Set(FIELDS[type]), [type]);
+  const specials = useSpecials(type === 'wedding');
+  const packageChoices = useMemo(() => [...(specials || []).map((s) => s.name), ...extraPackageChoices], [specials]);
   const dateLabel = {
     wedding: 'Preferred wedding date',
     corporate: 'Event date',
@@ -254,7 +258,7 @@ export default function EnquiryForm({ type, tone = 'light', submitLabel = 'Send 
                 />
               )}
               {show.has('package') && (
-                <Select {...common} id={id('package')} label="Package of interest" options={options.weddingPackages} value={values.package} onChange={set('package')} error={errors.package} />
+                <Select {...common} id={id('package')} label="Package of interest" options={packageChoices} value={values.package} onChange={set('package')} error={errors.package} />
               )}
 
               {show.has('message') && (

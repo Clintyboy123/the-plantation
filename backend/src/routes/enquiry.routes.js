@@ -4,6 +4,7 @@ const validate = require('../middleware/validate');
 const { formLimiter } = require('../middleware/rateLimit');
 const controller = require('../controllers/enquiry.controller');
 const o = require('../config/enquiryOptions');
+const specials = require('../services/special.service');
 
 const today = () => new Date().toISOString().slice(0, 10);
 const when = (...types) => body('type').custom((v) => types.includes(v));
@@ -55,7 +56,13 @@ router.post(
 
     // Wedding
     body('partnerName').if(when('wedding')).optional({ values: 'falsy' }).trim().isLength({ max: 120 }),
-    oneOf('package', o.weddingPackages, 'Choose a package from the list'),
+    // Packages are the venue's specials (edited in /admin), so the list is checked against the database.
+    body('package')
+      .optional({ values: 'falsy' })
+      .trim()
+      .custom(async (v) => {
+        if (!(await specials.packageChoices()).includes(v)) throw new Error('Choose a package from the list');
+      }),
     body('viewing').optional().isBoolean().toBoolean(),
     body('dateFlexible').optional().isBoolean().toBoolean(),
 

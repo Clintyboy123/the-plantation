@@ -18,9 +18,21 @@ const Gallery = lazy(() => import('./pages/Gallery'));
 const Story = lazy(() => import('./pages/Story'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Enquire = lazy(() => import('./pages/Enquire'));
+const Admin = lazy(() => import('./pages/admin/Admin'));
 
 export default function App() {
   const location = useLocation();
+
+  // The admin is a quiet back office: no intro, music, smooth scroll or page transitions.
+  if (location.pathname === '/admin' || location.pathname.startsWith('/admin/')) {
+    return (
+      <MotionConfig reducedMotion="user" transition={{ duration: 0.7, ease: easyEase }}>
+        <Suspense fallback={<div className="min-h-dvh bg-ivory" />}>
+          <Admin />
+        </Suspense>
+      </MotionConfig>
+    );
+  }
 
   return (
     // reducedMotion="user": visitors who ask their device for less motion get fades without movement.

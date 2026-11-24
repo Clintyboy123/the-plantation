@@ -16,7 +16,8 @@ import VideoFilm from '../components/VideoFilm';
 import MomentReel from '../components/MomentReel';
 import ImagineSequence from '../components/ImagineSequence';
 import Frame, { FrameTone } from '../components/Frame';
-import { awards, moments, packages, weddingFacts, weddingTestimonials } from '../content/weddings';
+import { awards, moments, weddingFacts, weddingTestimonials } from '../content/weddings';
+import useSpecials from '../hooks/useSpecials';
 import { church } from '../content/site';
 import { cinema, ease, viewportOnce } from '../utils/motion';
 
@@ -147,7 +148,8 @@ function Interlude() {
 /* Packages ------------------------------------------------------------------------ */
 function Packages() {
   const [open, setOpen] = useState(0);
-  const current = packages[open ?? 0];
+  const specials = useSpecials(); // managed by the venue in /admin
+  const current = specials?.[open ?? 0] ?? specials?.[0];
   return (
     <section id="packages" className="scroll-mt-20 section-y bg-ivory">
       <div className="wrap">
@@ -158,9 +160,16 @@ function Packages() {
         />
         <div className="grid-site mt-16 items-start gap-y-12 lg:mt-20">
           <div className="col-span-4 md:col-span-12 lg:col-span-7">
+            {specials === null && <div className="min-h-[24rem]" aria-hidden="true" />}
+            {specials?.length === 0 && (
+              <p className="type-body-l text-center text-stone md:text-left">
+                We are putting together new specials. Ask us what is on offer for your date.
+              </p>
+            )}
+            {specials?.length > 0 && (
             <Accordion
               onChange={setOpen}
-              items={packages.map((p) => ({
+              items={specials.map((p) => ({
                 kicker: p.kicker,
                 title: p.name,
                 body: (
@@ -174,10 +183,12 @@ function Packages() {
                 ),
               }))}
             />
+            )}
             <p className="mt-10 text-center type-caption text-stone md:text-left">
               Availability changes daily with new bookings and cancellations. Tell us your date and we will confirm it, or suggest the closest alternatives.
             </p>
           </div>
+          {current && (
           <Frame className="hidden aspect-[4/5] lg:col-span-4 lg:col-start-9 lg:block">
             <AnimatePresence initial={false}>
               <motion.div
@@ -191,6 +202,7 @@ function Packages() {
               </motion.div>
             </AnimatePresence>
           </Frame>
+          )}
         </div>
       </div>
     </section>

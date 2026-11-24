@@ -1,6 +1,6 @@
 # The Plantation
 
-Redesign of theplantation.co.za: the umbrella site for The Plantation (weddings, corporate events, forest suites), The Boma and 39 on Church, with six enquiry paths that save to a database.
+Redesign of theplantation.co.za: the umbrella site for The Plantation (weddings, corporate events, forest suites), The Boma and 39 on Church, with six enquiry paths that save to a database and an admin (`/admin`) where the venue updates its wedding specials.
 
 - **Domain:** theplantation.co.za
 - **Compose project name:** `theplantation`
@@ -76,6 +76,9 @@ and enquiries are read with the command under "Read enquiries" below. To email t
 `MAIL_TO`. `MAIL_TO_BOMA` is set to The Boma's own inbox (theboma@rmproperties.co.za), so Boma enquiries go there.
 `MAIL_TO_CHURCH` can do the same for 39 on Church (empty = it goes to `MAIL_TO`).
 
+**Admin settings are required.** Set `JWT_SECRET` (generate it with `openssl rand -base64 48`), and set
+`ADMIN_EMAIL` / `ADMIN_PASSWORD` (12+ characters) for the venue's login. See "The admin" below.
+
 ## Run it
 
 Build and start (also the command for the first launch on the VPS):
@@ -130,11 +133,7 @@ Undo the most recent migration:
 docker compose exec backend npm run migrate:undo
 ```
 
-Load starting data (only when the project has seeders):
-
-```bash
-docker compose exec backend npm run seed
-```
+The only seeder creates the venue's admin login. See "The admin" below.
 
 ## The API
 
@@ -152,6 +151,40 @@ Expected: `{"success":true,"message":"API is operational","database":"connected"
 | --- | --- | --- |
 | GET | `/api/health` | API and database status |
 | POST | `/api/enquiries` | Saves an enquiry (types: `wedding`, `corporate`, `accommodation`, `boma`, `church`, `general`) and emails it if SMTP is set. Validated per type, honeypot-protected, 10 per hour per visitor. |
+| GET | `/api/specials` | The wedding specials visitors see: switched on and not past their "show until" date, in the admin's order. |
+| POST | `/api/auth/login` | Admin sign-in (email + password). Sets an httpOnly session cookie for 7 days. 10 attempts per 15 minutes. |
+| POST | `/api/auth/logout` | Signs out (clears the cookie). |
+| GET | `/api/auth/me` | The signed-in admin, or 401. |
+| GET | `/api/admin/specials` | Every special, including hidden and expired ones. Admin only. |
+| POST | `/api/admin/specials` | Adds a special. Admin only. |
+| PUT | `/api/admin/specials/:id` | Edits a special (any of: kicker, name, body, note, photo, isPublished, availableUntil). Admin only. |
+| PUT | `/api/admin/specials/order` | Saves the order: `{ "ids": [3, 1, 2, 4] }`, every special once. Admin only. |
+| DELETE | `/api/admin/specials/:id` | Deletes a special. Admin only. |
+
+The wedding form's "Package of interest" list is the specials plus "A custom package" and "Not sure yet";
+the API accepts any special's name there, hidden or not.
+
+## The admin
+
+`https://theplantation.co.za/admin` is where the venue adds, edits, reorders, hides and deletes its wedding
+specials. Each special has a label, name, description, optional small print, a photo from the site's photo library
+and an optional "show until" date, after which it hides itself (South African date). The four specials on the old
+site are loaded by a migration, so the Weddings page is complete on day one.
+
+Create the venue's login (or reset its password) from `ADMIN_EMAIL` and `ADMIN_PASSWORD` in `.env`:
+
+```bash
+docker compose exec backend npx sequelize-cli db:seed --seed 20261124090000-admin.js
+```
+
+Running it again with a new `ADMIN_PASSWORD` resets the password. After that, `ADMIN_PASSWORD` can be removed from
+`.env`. To add a second person, change `ADMIN_EMAIL` and `ADMIN_PASSWORD`, run it again, then put them back.
+
+New photos for specials have to be added to the site's photo library (`tools/photos.py`) and redeployed; the admin
+doesn't upload files.
+
+On the GitHub Pages preview there is no API, so `/admin` says it is only available on the live site and the
+Weddings page shows the four built-in specials.
 
 ### Read enquiries
 
@@ -390,3 +423,10 @@ server {
 - **Search:** each page sets its own title, description and canonical link; `robots.txt`, `sitemap.xml` and
   venue structured data are included. It is still a browser-rendered React site, so link previews use the
   site-wide image in `index.html`.
+- **A small admin for specials only.** The venue's most time-sensitive content (offers with dates) is the part they
+  edit themselves; everything else stays in the code so the design can't be broken by accident. Specials live in a
+  `specials` table, and a "show until" date retires an offer automatically, so an expired special never stays up.
+- **Admin sign-in:** passwords are stored only as bcrypt hashes (`bcryptjs`, the pure-JavaScript build, so the Alpine
+  image needs no build tools). A signed session token sits in an httpOnly cookie that page scripts can't read; every
+  `/api/admin` route checks it on the server. Wrong email and wrong password give the same message, and sign-in is
+  rate limited. `/admin` is hidden from search engines (`robots.txt` and a noindex tag).

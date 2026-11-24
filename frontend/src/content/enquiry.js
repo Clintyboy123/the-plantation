@@ -2,7 +2,7 @@
 // anything else). Each path asks only what that audience's team needs to reply properly.
 
 export const options = {
-  weddingPackages: ['Fairy Tale Wedding Package', 'Intimate Wedding Special', 'Sizzling Winter Special', 'Hot Summer Special', 'A custom package', 'Not sure yet'],
+  // Wedding packages come from the venue's specials (managed in /admin), see hooks/useSpecials.js.
   corporateEvents: ['Conference', 'Executive strategy session', 'Product launch', 'Awards ceremony or banquet', 'Breakfast or lunch', 'Cocktail party', 'Year-end function', 'Other'],
   corporateVenues: ['The Plantation', '39 on Church conference centre', 'The Boma', 'Advise me'],
   suites: ['King Suite', 'Family Suite', 'Honeymoon Suite', 'Any suite'],

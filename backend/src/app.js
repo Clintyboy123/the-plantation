@@ -2,6 +2,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
 const env = require('./config/env');
 const routes = require('./routes');
 const { apiLimiter } = require('./middleware/rateLimit');
@@ -20,6 +21,7 @@ app.use(
   })
 );
 app.use(express.json({ limit: '100kb' }));
+app.use(cookieParser()); // reads the admin session cookie
 
 const isHealthCheck = (req) => req.path === '/health';
 app.use('/api', (req, res, next) => (isHealthCheck(req) ? next() : apiLimiter(req, res, next)), routes);
