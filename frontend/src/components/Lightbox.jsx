@@ -6,6 +6,7 @@ import useFocusTrap from '../hooks/useFocusTrap';
 import { useSmoothScroll } from '../context/SmoothScroll';
 import { allPhotos } from './Photo';
 import { cinema, ease } from '../utils/motion';
+import { BASE } from '../utils/asset';
 
 // Full-screen viewer for a list of photo keys. Arrow keys, swipe and buttons move between images;
 // Escape closes and returns focus to the thumbnail that opened it.
@@ -82,8 +83,8 @@ export default function Lightbox({ items, index, onClose, onIndex }) {
                 }}
               >
                 <img
-                  src={`/photos/${name}-${photo.widths[photo.widths.length - 1]}.webp`}
-                  srcSet={photo.widths.map((w) => `/photos/${name}-${w}.webp ${w}w`).join(', ')}
+                  src={`${BASE}photos/${name}-${photo.widths[photo.widths.length - 1]}.webp`}
+                  srcSet={photo.widths.map((w) => `${BASE}photos/${name}-${w}.webp ${w}w`).join(', ')}
                   sizes="90vw"
                   alt={photo.alt}
                   width={photo.width}

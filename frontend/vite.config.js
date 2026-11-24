@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  // "/" for the VPS. The GitHub Pages preview builds with VITE_BASE=/the-plantation/ (see .github/workflows/pages.yml).
+  base: process.env.VITE_BASE || '/',
   plugins: [react(), tailwindcss()],
   server: {
     // Local development only: stands in for the Nginx /api proxy used in production.

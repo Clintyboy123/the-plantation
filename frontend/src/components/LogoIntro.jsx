@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { easyEase } from '../utils/motion';
+import { asset } from '../utils/asset';
 
 // Page-load intro: the After Effects logo write-on (light version, rendered from
 // "Plantation Logo Animation/The_Plantation_Logo_Write-On.aep") plays on a white screen. When the lockup is
@@ -120,14 +121,14 @@ export default function LogoIntro({ onReveal, onDone }) {
           onClick={leave}
         >
           {reduce ? (
-            <img src="/intro/logo-final.webp" alt="The Plantation" className="w-[100vw] max-w-none shrink-0 object-contain md:w-[min(54vw,760px)]" />
+            <img src={asset('intro/logo-final.webp')} alt="The Plantation" className="w-[100vw] max-w-none shrink-0 object-contain md:w-[min(54vw,760px)]" />
           ) : (
             // multiply: the video's white becomes exactly the page's white, so no frame edge can ever show.
             // Kept deliberately small: the script spans ~540px on desktop (the video frame is 1.4x the script's width).
             <video
               ref={video}
               className="w-[100vw] max-w-none shrink-0 object-contain mix-blend-multiply md:w-[min(54vw,760px)]"
-              src="/intro/logo-write-on.mp4"
+              src={asset('intro/logo-write-on.mp4')}
               muted
               playsInline
               preload="auto"

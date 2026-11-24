@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Music, Pause, SkipForward, Volume2, VolumeX } from 'lucide-react';
 import { ease, easyEaseFn } from '../utils/motion';
+import { asset } from '../utils/asset';
 
 // Site-wide music, bottom-left. One <audio> element lives in the layout, so playback carries on
 // across every page. Starts by itself when the logo intro ends (or on the first interaction, if the
@@ -11,9 +12,9 @@ import { ease, easyEaseFn } from '../utils/motion';
 // Tracks are licensed stock music (AudioJungle / MoodMode, Alex Shulgin): keep the licences on file for
 // this website before launch.
 const TRACKS = [
-  { src: '/music/cinematic-ambient-inspire.m4a', title: 'Cinematic Ambient Inspire', artist: 'Alex Shulgin' },
-  { src: '/music/uplifting-piano.m4a', title: 'Uplifting Piano', artist: 'MoodMode' },
-  { src: '/music/wedding-full-track.m4a', title: 'Wedding', artist: 'Full track' },
+  { src: asset('music/cinematic-ambient-inspire.m4a'), title: 'Cinematic Ambient Inspire', artist: 'Alex Shulgin' },
+  { src: asset('music/uplifting-piano.m4a'), title: 'Uplifting Piano', artist: 'MoodMode' },
+  { src: asset('music/wedding-full-track.m4a'), title: 'Wedding', artist: 'Full track' },
 ];
 const FADE = 900; // ms
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useMotionValueEvent } from 'motion/react';
 import RingRenderer from './RingRenderer';
+import { asset } from '../../utils/asset';
 
 // The canvas for the engagement ring. `pose` is a motion value 0..1 (from the scroll); every change redraws
 // one frame. Loaded lazily (three.js is only fetched on the page that shows the ring).
@@ -30,7 +31,7 @@ export default function RingCanvas({ pose, onInteract, className = '' }) {
     const ro = new ResizeObserver(([entry]) => r.resize(entry.contentRect.width, entry.contentRect.height));
     ro.observe(box);
     r.setPose(pose.get());
-    r.load({ model: '/ring/solitaire-ring.glb', hdr: '/ring/pretoria_gardens_1k.hdr', draco: '/ring/draco/' })
+    r.load({ model: asset('ring/solitaire-ring.glb'), hdr: asset('ring/pretoria_gardens_1k.hdr'), draco: asset('ring/draco/') })
       .then(() => {
         const { width, height } = box.getBoundingClientRect();
         r.resize(width, height);
